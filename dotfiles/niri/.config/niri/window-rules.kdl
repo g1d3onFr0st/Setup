@@ -1,0 +1,13 @@
+window-rule {
+    geometry-corner-radius 12
+    clip-to-geometry true
+}
+
+window-rule {
+    match app-id="com.mitchellh.ghostty"
+    open-maximized true
+}
+window-rule {
+    match app-id=r#"firefox-devedition$"# title="^Picture-in-Picture$"
+    open-floating true 
+}

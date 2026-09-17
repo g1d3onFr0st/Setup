@@ -1,0 +1,51 @@
+konsave
+distrobox or a VM
+podman 
+gum
+redis , CLI
+sqlite , cli , browser 
+Git LFS
+tailscale headscale
+cargo
+direnv
+yq
+rofi
+pass
+postman , insomnia
+lazysql , lazydocker
+figma-linux
+
+
+
+KeePassXC
+watchexec
+ttyd
+asciinema
+choose
+sd
+
+
+
+Inkscape
+Krita
+gimp
+audacity
+kdenlive
+onlyoffice-desktopeditors
+
+
+
+
+pandoc
+poppler-utils
+ImageMagick
+qpdf
+jpdf
+
+
+
+cava
+pipes
+
+
+

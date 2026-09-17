@@ -1,0 +1,14 @@
+output "eDP-1" {
+    mode "1920x1200@60"
+    // background-color "#00ffee"
+    // backdrop-color "#03072a" // overview and app-gap color
+    backdrop-color "#000000"
+    scale 1.25
+    transform "normal" // 90 180 270
+    position x=0 y=0
+        hot-corners {
+            off
+            // top-left
+    }
+
+}

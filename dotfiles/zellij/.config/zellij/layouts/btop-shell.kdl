@@ -1,0 +1,14 @@
+layout {
+
+    tab name="btop" {
+        pane command="btop"
+    }
+
+    tab name="Terminal" {
+        pane command="zsh" {
+            args "-c" "fastfetch && duf"
+        }
+
+    }
+}
+    pane_frames false

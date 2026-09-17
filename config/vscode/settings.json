@@ -1,0 +1,140 @@
+{
+  "todo-tree.ripgrep.ripgrep": "/home/g1d3onFr0st/.nix-profile/bin/rg",
+  "workbench.sideBar.location": "right",
+  "workbench.activityBar.location": "top",
+  "editor.formatOnSave": true,
+  "files.autoSave": "onFocusChange",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "explorer.confirmDragAndDrop": false,
+  "editor.cursorSmoothCaretAnimation": "on",
+  "workbench.browser.searchEngine": "duckduckgo",
+  "telemetry.feedback.enabled": false,
+  "gitlens.telemetry.enabled": false,
+  "telemetry.telemetryLevel": "off",
+  // "terminal.integrated.defaultProfile.linux": "zsh",
+  "editor.cursorBlinking": "smooth",
+  "files.exclude": {
+    "**/.git": false,
+    "**/node_modules": false
+  },
+  // "remote.portsAttributes": {
+  //   "5500": {
+  //     "protocol": "http"
+  //   }
+  // },
+  // "terminal.integrated.defaultProfile.windows": "",
+  // "telemetry.editStats.details.enabled": false,
+  // "telemetry.editStats.enabled": false,
+  // "editor.experimental.treeSitterTelemetry": false,
+  // "chat.editor.claude.preferAgentHost": false,
+  "chat.agent.maxRequests": 0,
+  "chat.agent.enabled": false,
+  "chat.extensionTools.enabled": false,
+  "chat.tools.confirmationCarousel.enabled": false,
+  "chat.tools.autoExpandFailures": false,
+  "chat.viewSessions.enabled": false,
+  "chat.checkpoints.enabled": false,
+  "chat.agent.codeBlockProgress": false,
+  "chat.agent.thinking.generateTitles": false,
+  "chat.mcp.autostart": "never",
+  "chat.tools.terminal.enableAutoApprove": false,
+  "chat.implicitContext.suggestedContext": false,
+  "chat.detectParticipant.enabled": false,
+  "chat.exitAfterDelegation": false,
+  "chat.disableAIFeatures": true,
+
+  "errorLens.codeLensEnabled": true,
+  "errorLens.codeLensOnClick": "showProblemsView",
+  // "chat.extensionUnification.enabled": false,
+  // "chat.editor.localAgent.enabled": false,
+  // "chat.editor.copilotCli.hideExtensionHost": false,
+  // "chat.tips.enabled": false,
+  // "chat.agent.thinking.terminalTools": false,
+  // "chat.agent.thinking.generateTitles": false,
+  // "chat.agent.codeBlockProgress": false,
+  // "chat.agent.sandbox.retryWithAllowNetworkRequests": false,
+  // "chat.agent.sandbox.allowUnsandboxedCommands": false,
+  "workbench.secondarySideBar.defaultVisibility": "hidden",
+
+  "workbench.secondarySideBar.showLabels": false,
+  "explorer.confirmDelete": false,
+  "explorer.confirmPasteNative": false,
+  "json.schemaDownload.trustedDomains": {
+    "https://developer.microsoft.com/json-schemas/": true,
+    "https://json-schema.org/": true,
+    "https://json.schemastore.org/": true,
+    "https://raw.githubusercontent.com": true,
+    "https://raw.githubusercontent.com/devcontainers/spec/": true,
+    "https://raw.githubusercontent.com/microsoft/vscode/": true,
+    "https://schemastore.azurewebsites.net/": true,
+    "https://www.schemastore.org/": true
+  },
+  "editor.fontFamily": "'0xProto Nerd Font Mono' , monospace",
+  "terminal.integrated.fontFamily": " '0xProto Nerd Font Mono' , monospace ",
+  "workbench.panel.showLabels": false,
+  "keyboard.dispatch": "keyCode",
+  "workbench.iconTheme": "catppuccin-latte",
+  "workbench.colorTheme": "Dark 2026",
+  // afterrrrrrrrrrrrrrrrr
+  "bookmarks.useWorkaroundForFormatters": true,
+  "cSpell.autoFormatConfigFile": true,
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "code-runner.saveAllFilesBeforeRun": true,
+  "code-runner.saveFileBeforeRun": true,
+  "code-runner.runInTerminal": true,
+  "diffEditor.codeLens": true,
+  "terminal.integrated.suggest.enabled": true,
+  "workbench.editorAssociations": {
+    "{git,gitlens,chat-editing-snapshot-text-model,copilot,git-graph,git-graph-3}:/**/*.qrc": "default",
+    "*.svg": "default",
+    "*.qrc": "qt-core.qrcEditor"
+  },
+  // "diffEditor.hideUnchangedRegions.enabled": true,
+  // "editor.inlayHints.enabled": "off",
+  "workbench.colorCustomizations": {
+    "editor.lineHighlightBackground": "#1073cf2d",
+    "editor.lineHighlightBorder": "#00eeff4b"
+  },
+  "css.format.spaceAroundSelectorSeparator": true,
+  "less.format.spaceAroundSelectorSeparator": true,
+  "gitlens.currentLine.dateFormat": "",
+  "html-to-css-autocompletion.folderNamesToBeIncluded": [""],
+  // "editor.wordWrap": "off",
+  // "diffEditor.wordWrap": "off",
+  // "editor.guides.indentation": false,
+  // "editor.guides.bracketPairs": false,
+  "cSpell.enabled": true,
+  "gitlens.ai.model": "gitkraken",
+  "gitlens.ai.vscode.model": "copilot:gpt-4.1",
+  "gitlens.graph.minimap.enabled": false,
+  "[snippets]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "gitlens.ai.gitkraken.model": "gemini:gemini-2.0-flash",
+  "editor.quickSuggestions": {
+    "strings": "on"
+  },
+  "tailwind-fold.autoFold": false,
+  "qt-qml.qmlls.useQmlImportPathEnvVar": true,
+  "files.associations": {
+    "*.qml": "qml"
+  },
+  "[qml]": {
+    "editor.defaultFormatter": "AndreOneti.qml-formatter"
+  },
+  "terminal.integrated.commandsToSkipShell": [
+    "kilo-code.new.agentManagerOpen",
+    "kilo-code.new.agentManager.showTerminal",
+    "kilo-code.new.agentManager.previousTerminal",
+    "kilo-code.new.agentManager.nextTerminal"
+  ],
+  "kilo-code.new.agentWorkStyle": "unset",
+  "tailwindCSS.classAttributes": ["class", "className"],
+  "prettier.singleAttributePerLine": true,
+  "path-intellisense.autoSlashAfterDirectory": true,
+  "path-intellisense.autoTriggerNextSuggestion": true,
+  "path-intellisense.showHiddenFiles": true,
+  "firefox.executable": "/home/g1d3onFr0st/.nix-profile/bin/firefox-devedition"
+}

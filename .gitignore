@@ -1,0 +1,5 @@
+lazy-lock.json
+.histfile
+.zcompdump
+node_modules
+dotfiles/local/.local/bin/zed

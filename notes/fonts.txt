@@ -1,0 +1,6 @@
+fonts are in ~/.local/share/fonts
+
+my fonts are :
+1. JetBrains: https://github.com/ryanoasis/nerd-fonts/releases/download/v3.5.1/JetBrainsMono.zip
+2. 0xProto: https://github.com/ryanoasis/nerd-fonts/releases/download/v3.5.1/0xProto.zip
+3. times new roman: https://font.download/dl/font/times-new-roman.zip

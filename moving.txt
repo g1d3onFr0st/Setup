@@ -1,0 +1,17 @@
+~/.config/sops  
+~/.password-store
+~/.config/Code/user/ settings.json keyboard.json extensions.json snippets/ 
+~/.gnupg  keys
+~/.ssh
+pictures
+videos
+desktop
+documents
+music
+downloads
+public
+templates
+codes
+personal-stuff
+bookmark
+vscode stuff 

@@ -1,0 +1,11 @@
+#!/usr/bin/env zsh
+
+(( $# )) || {
+    echo "usage: sudon <command> [args...]"
+    exit 1
+}
+
+cmd="$1"
+shift
+
+sudo "$HOME/.nix-profile/bin/$cmd" "$@"

@@ -1,0 +1,12 @@
+layout {
+    pane split_direction="vertical" {
+        pane command="zsh" size="50%" {
+            args "-lc" "exec python ~/.local/scripts/playerctl-tui.py"
+        }
+        pane command="zsh" {
+    args "-lc" "exec cava"
+}
+    }
+}
+
+pane_frames false

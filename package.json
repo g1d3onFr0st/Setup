@@ -1,0 +1,17 @@
+{
+  "name": "setup",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/node": "^26.1.2"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "commander": "^15.0.0",
+    "os": "^0.1.2",
+    "path": "^0.12.7"
+  }
+}

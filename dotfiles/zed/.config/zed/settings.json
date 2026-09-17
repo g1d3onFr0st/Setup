@@ -1,0 +1,56 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "which_key": {
+    "enabled": true
+  },
+  "session": {
+    "trust_all_worktrees": true
+  },
+  "terminal": {
+    "font_family": "0xProto Nerd Font Mono",
+    "font_fallbacks": [
+      "monospace"
+    ]
+  },
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  "agent": {
+    "enabled": false,
+    "button": false,
+    "favorite_models": [],
+    "model_parameters": []
+  },
+  "minimap": {
+    "show": "always"
+  },
+  "cursor_blink": true,
+  "autosave": "on_focus_change",
+  "buffer_font_fallbacks": [
+    "monospace"
+  ],
+  "buffer_font_family": "0xProto Nerd Font Mono",
+  "file_types": {
+    "qml": [
+      "*.qml"
+    ]
+  },
+  "format_on_save": "on",
+  "base_keymap": "VSCode",
+  "icon_theme": "Material Icon Theme",
+  "ui_font_size": 16,
+  "buffer_font_size": 15,
+  "theme": {
+    "mode": "dark",
+    "light": "One Light",
+    "dark": "Tokyo Night",
+  },
+}

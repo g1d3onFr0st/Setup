@@ -1,0 +1,41 @@
+#!/usr/bin/env bash
+
+WALLPAPER_DIR="$HOME/Pictures/Wallpapers"
+
+selected="$(
+    find "$WALLPAPER_DIR" -type f \
+        \( -iname '*.jpg' \
+        -o -iname '*.jpeg' \
+        -o -iname '*.png' \
+        -o -iname '*.webp' \) |
+        while IFS= read -r img; do
+            printf '%s\0icon\x1f%s\n' "$(basename "$img")" "$img"
+        done |
+        rofi -dmenu \
+            -show-icons \
+            -theme-str '
+            window {
+                width: 900px;
+            }
+
+            listview {
+                columns: 3;
+                lines: 2;
+                flow: horizontal;
+            }
+
+            element {
+                orientation: vertical;
+                padding: 10px;
+            }
+
+            element-icon {
+                size: 220px;
+            }
+        '
+)"
+
+[[ -z "$selected" ]] && exit 0
+
+awww img --transition-type center --transition-fps 150 "$WALLPAPER_DIR/$selected"
+noctalia msg wallpaper-set "$WALLPAPER_DIR/$selected"

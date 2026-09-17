@@ -1,0 +1,239 @@
+binds {
+    Mod+Alt+Equal { spawn-sh "~/.local/bin/niri-zoomctl in" ; }
+    Mod+Alt+Minus { spawn-sh "~/.local/bin/niri-zoomctl out" ; }
+    Mod+Alt+Return { spawn-sh "~/.local/bin/niri-zoomctl reset" ; }
+
+    Mod+P hotkey-overlay-title="Run a Wallpaper Launcher: Noctalia Wallpaper Launcher" { spawn-sh "noctalia msg panel-open wallpaper"; }
+    Mod+Ctrl+Shift+Alt+Space hotkey-overlay-title=null repeat=true { spawn-sh "noctalia msg panel-toggle launcher /emo"; }
+    Mod+I hotkey-overlay-title="Show Clipboard History: Noctalia Clipboard History Launcher" {spawn-sh "noctalia msg panel-toggle clipboard"; }
+    Alt+Tab {spawn "";}
+    Alt+Shift+Tab {spawn "";}
+    Mod+Backspace hotkey-overlay-title="Run a Code IDE: Visual Studio Code" { spawn "code"; }
+    Mod+Backslash hotkey-overlay-title="Run a File Explorer: Dolphin" { spawn "dolphin"; }
+    Mod+Shift+F23 hotkey-overlay-title="Run an Application Launcher: Noctalia Launcher" { spawn-sh "noctalia msg panel-toggle launcher "; }
+    Mod+Shift+Slash hotkey-overlay-title=null { show-hotkey-overlay; }
+    Mod+Return hotkey-overlay-title="Open a Terminal: Ghostty" { spawn "ghostty"; }
+    Mod+Space hotkey-overlay-title="Run a Browser: Firefox Developer-Edition Browser " { spawn-sh "firefox-devedition"; }
+    Mod+Y hotkey-overlay-title="Toggle Color Picker: Hyprpicker" { spawn-sh "hyprpicker | wl-copy"; }
+
+    Mod+Shift+U hotkey-overlay-title="Lock and suspend the Screen: Noctalia Lock And Suspend" { spawn-sh "noctalia msg session lock-and-suspend"; }
+    Mod+Shift+L hotkey-overlay-title="Lock the Screen: Noctalia Lock" { spawn-sh "noctalia msg session lock"; }
+    Mod+Shift+S hotkey-overlay-title="Shutdown the computer" { spawn-sh "noctalia msg session shutdown"; }
+    Mod+Shift+O hotkey-overlay-title="Logout of session" { spawn-sh "noctalia msg session logout"; }
+    Mod+Shift+R hotkey-overlay-title="Reboot the computer" { spawn-sh "noctalia msg session reboot"; }
+    
+    
+    XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "noctalia msg volume-up 10"; }
+    XF86AudioLowerVolume allow-when-locked=true { spawn-sh "noctalia msg volume-down 10"; }
+    Ctrl+F7 allow-when-locked=true { spawn-sh "noctalia msg mic-volume-up 10"; }
+    Ctrl+F6 allow-when-locked=true { spawn-sh "noctalia msg mic-volume-down 10"; }
+    Alt+F7 allow-when-locked=true { spawn-sh "noctalia msg media next-player"; }
+    Alt+F6 allow-when-locked=true { spawn-sh "noctalia msg media previous-player"; }
+
+
+    XF86AudioMute        allow-when-locked=true { spawn-sh "noctalia msg volume-mute"; }
+    XF86AudioMicMute     allow-when-locked=true { spawn-sh "noctalia msg mic-mute"; }
+
+    XF86AudioPlay        allow-when-locked=true { spawn-sh "noctalia msg media toggle"; }
+
+    XF86MonBrightnessUp allow-when-locked=true { spawn-sh "noctalia msg brightness-up 10"; }
+    XF86MonBrightnessDown allow-when-locked=true { spawn-sh "noctalia msg brightness-down 10"; }
+
+
+    Mod+O hotkey-overlay-title=null repeat=true repeat=false { toggle-overview; }
+    Mod+Q hotkey-overlay-title=null repeat=true { close-window; }
+
+    Mod+Left hotkey-overlay-title=null { focus-column-left; }
+    Mod+Down  { focus-window-down; }
+    Mod+Up    { focus-window-up; }
+    Mod+Right hotkey-overlay-title=null { focus-column-right; }
+    Mod+H     { focus-column-left; }
+    Mod+J     { focus-window-down; }
+    Mod+K     { focus-window-up; }
+    Mod+L     { focus-column-right; }
+
+
+    Mod+Ctrl+Left hotkey-overlay-title=null { move-column-left; }
+    Mod+Ctrl+Down { move-window-down; }
+    Mod+Ctrl+Up    { move-window-up; }
+    Mod+Ctrl+Right hotkey-overlay-title=null { move-column-right; }
+    Mod+Ctrl+H     { move-column-left; }
+    Mod+Ctrl+J     { move-window-down; }
+    Mod+Ctrl+K     { move-window-up; }
+    Mod+Ctrl+L     { move-column-right; }
+
+
+    // Alternative commands that move across workspaces when reaching
+    // the first or last window in a column.
+    // Mod+J     { focus-window-or-workspace-down; }
+    // Mod+K     { focus-window-or-workspace-up; }
+    // Mod+Ctrl+J     { move-window-down-or-to-workspace-down; }
+    // Mod+Ctrl+K     { move-window-up-or-to-workspace-up; }
+
+    Mod+Home { focus-column-first; }
+    Mod+End  { focus-column-last; }
+    Mod+Ctrl+Home { move-column-to-first; }
+    Mod+Ctrl+End  { move-column-to-last; }
+
+    // Mod+Shift+Left  { focus-monitor-left; }
+    // Mod+Shift+Down  { focus-monitor-down; }
+    // Mod+Shift+Up    { focus-monitor-up; }
+    // Mod+Shift+Right { focus-monitor-right; }
+    // Mod+Shift+H     { focus-monitor-left; }
+    // Mod+Shift+J     { focus-monitor-down; }
+    // Mod+Shift+K     { focus-monitor-up; }
+    // Mod+Shift+L     { focus-monitor-right; }
+
+    // Mod+Shift+Ctrl+Left  { move-column-to-monitor-left; }
+    // Mod+Shift+Ctrl+Down  { move-column-to-monitor-down; }
+    // Mod+Shift+Ctrl+Up    { move-column-to-monitor-up; }
+    // Mod+Shift+Ctrl+Right { move-column-to-monitor-right; }
+    // Mod+Shift+Ctrl+H     { move-column-to-monitor-left; }
+    // Mod+Shift+Ctrl+J     { move-column-to-monitor-down; }
+    // Mod+Shift+Ctrl+K     { move-column-to-monitor-up; }
+    // Mod+Shift+Ctrl+L     { move-column-to-monitor-right; }
+
+    // Alternatively, there are commands to move just a single window:
+    // Mod+Shift+Ctrl+Left  { move-window-to-monitor-left; }
+
+    // And you can also move a whole workspace to another monitor:
+    // Mod+Shift+Ctrl+Left  { move-workspace-to-monitor-left; }
+
+    Mod+ALt+Right  hotkey-overlay-title=null repeat=true            { focus-workspace-down; }
+    Mod+Alt+Left   hotkey-overlay-title=null repeat=true           { focus-workspace-up; }
+    Mod+Alt+Down  hotkey-overlay-title=null repeat=true       { move-column-to-workspace-down; }
+    Mod+Alt+Up     hotkey-overlay-title=null repeat=true    { move-column-to-workspace-up; }
+    // Mod+U              { focus-workspace-down; }
+    // Mod+I              { focus-workspace-up; }
+    // Mod+Ctrl+U         { move-column-to-workspace-down; }
+    // Mod+Ctrl+I         { move-column-to-workspace-up; }
+
+    // Alternatively, there are commands to move just a single window:
+    // Mod+Ctrl+Page_Down { move-window-to-workspace-down; }
+
+    // Mod+Shift+U         { move-workspace-down; }
+    // Mod+Shift+I         { move-workspace-up; }
+    Mod+Ctrl+Alt+Down         { move-workspace-down; }
+    Mod+Ctrl+Alt+Up         { move-workspace-up; }
+
+
+    Mod+WheelScrollDown      cooldown-ms=150 { focus-workspace-down; }
+    Mod+WheelScrollUp        cooldown-ms=150 { focus-workspace-up; }
+    Mod+Ctrl+WheelScrollDown cooldown-ms=150 { move-column-to-workspace-down; }
+    Mod+Ctrl+WheelScrollUp   cooldown-ms=150 { move-column-to-workspace-up; }
+
+    Mod+WheelScrollRight      { focus-column-right; }
+    Mod+WheelScrollLeft       { focus-column-left; }
+    Mod+Ctrl+WheelScrollRight { move-column-right; }
+    Mod+Ctrl+WheelScrollLeft  { move-column-left; }
+
+    // Usually scrolling up and down with Shift in applications results in
+    // horizontal scrolling; these binds replicate that.
+    Mod+Shift+WheelScrollDown      { focus-column-right; }
+    Mod+Shift+WheelScrollUp        { focus-column-left; }
+    Mod+Ctrl+Shift+WheelScrollDown { move-column-right; }
+    Mod+Ctrl+Shift+WheelScrollUp   { move-column-left; }
+
+    Mod+1 { focus-workspace 1; }
+    Mod+2 { focus-workspace 2; }
+    Mod+3 { focus-workspace 3; }
+    Mod+4 { focus-workspace 4; }
+    Mod+5 { focus-workspace 5; }
+    Mod+6 { focus-workspace 6; }
+    Mod+7 { focus-workspace 7; }
+    Mod+8 { focus-workspace 8; }
+    Mod+9 { focus-workspace 9; }
+    Mod+Ctrl+1 { move-column-to-workspace 1; }
+    Mod+Ctrl+2 { move-column-to-workspace 2; }
+    Mod+Ctrl+3 { move-column-to-workspace 3; }
+    Mod+Ctrl+4 { move-column-to-workspace 4; }
+    Mod+Ctrl+5 { move-column-to-workspace 5; }
+    Mod+Ctrl+6 { move-column-to-workspace 6; }
+    Mod+Ctrl+7 { move-column-to-workspace 7; }
+    Mod+Ctrl+8 { move-column-to-workspace 8; }
+    Mod+Ctrl+9 { move-column-to-workspace 9; }
+
+    // Alternatively, there are commands to move just a single window:
+    // Mod+Ctrl+1 { move-window-to-workspace 1; }
+
+    // Switches focus between the current and the previous workspace.
+    // Mod+Tab { focus-workspace-previous; }
+
+    Mod+BracketLeft hotkey-overlay-title=null repeat=true { consume-or-expel-window-left; }
+    Mod+BracketRight hotkey-overlay-title=null repeat=true { consume-or-expel-window-right; }
+
+    Mod+Comma  { consume-window-into-column; }
+    Mod+Period { expel-window-from-column; }
+
+    Mod+R hotkey-overlay-title=null repeat=true { switch-preset-column-width; }
+    Mod+Ctrl+R { switch-preset-window-height; }
+
+    Mod+F hotkey-overlay-title=null repeat=true { maximize-column; }
+    Mod+Ctrl+F{ reset-window-height; }
+    Mod+Shift+F { fullscreen-window; }
+    Mod+M { maximize-window-to-edges; }
+
+
+    // Expand the focused column to space not taken up by other fully visible columns.
+    // Makes the column "fill the rest of the space".
+    // Mod+Ctrl+F { expand-column-to-available-width; }
+
+    Mod+C { center-column; }
+
+    // Center all fully visible columns on screen.
+    Mod+Ctrl+C { center-visible-columns; }
+
+    // Finer width adjustments.
+    // This command can also:
+    // * set width in pixels: "1000"
+    // * adjust width in pixels: "-5" or "+5"
+    // * set width as a percentage of screen width: "25%"
+    // * adjust width as a percentage of screen width: "-10%" or "+10%"
+    // Pixel sizes use logical, or scaled, pixels. I.e. on an output with scale 2.0,
+    // set-column-width "100" will make the column occupy 200 physical screen pixels.
+    Mod+Minus { set-column-width "-10%"; }
+    Mod+Equal { set-column-width "+10%"; }
+
+    // Finer height adjustments when in column with other windows.
+    Mod+Shift+Minus { set-window-height "-10%"; }
+    Mod+Shift+Equal { set-window-height "+10%"; }
+
+    // Move the focused window between the floating and the tiling layout.
+    Mod+V    hotkey-overlay-title=null repeat=true   { toggle-window-floating; }
+    Mod+Shift+V hotkey-overlay-title=null repeat=true { switch-focus-between-floating-and-tiling; }
+
+    // Toggle tabbed column display mode.
+    // Windows in this column will appear as vertical tabs,
+    // rather than stacked on top of each other.
+    Mod+W { toggle-column-tabbed-display; }
+
+    // Actions to switch layouts.
+    // Note: if you uncomment these, make sure you do NOT have
+    // a matching layout switch hotkey configured in xkb options above.
+    // Having both at once on the same hotkey will break the switching,
+    // since it will switch twice upon pressing the hotkey (once by xkb, once by niri).
+    // Mod+Space       { switch-layout "next"; }
+    // Mod+Shift+Space { switch-layout "prev"; }
+
+    Print { spawn-sh "noctalia msg screenshot-region"; }
+    Ctrl+Print { spawn-sh "noctalia msg screenshot-fullscreen"; }
+    Alt+Print { screenshot-window; }
+
+    // Applications such as remote-desktop clients and software KVM switches may
+    // request that niri stops processing the keyboard shortcuts defined here
+    // so they may, for example, forward the key presses as-is to a remote machine.
+    // It's a good idea to bind an escape hatch to toggle the inhibitor,
+    // so a buggy application can't hold your session hostage.
+    //
+    // The allow-inhibiting=false property can be applied to other binds as well,
+    // which ensures niri always processes them, even when an inhibitor is active.
+    Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
+
+    // The quit action will show a confirmation dialog to avoid accidental exits.
+    Mod+Shift+E { quit; }
+    Ctrl+Alt+Delete { quit; }
+
+    // Powers off the monitors. To turn them back on, do any input like
+    // moving the mouse or pressing any other key.
+    // Mod+Shift+P { power-off-monitors; }
+}

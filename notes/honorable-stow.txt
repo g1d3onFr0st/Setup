@@ -1,0 +1,5 @@
+konsole
+kate 
+kwrite
+quickshell
+waybar

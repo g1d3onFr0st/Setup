@@ -1,0 +1,46 @@
+internet browser :: (firefox | firefox-devedition) , tor-browser & chromium
+file explorer :: dolphine & yazi
+partition manger :: kde partition manger
+camera app :: kamoso & obs-studio
+terminal :: (konsole , alacritty | kitty ), & ghostty
+media vewier :: gwenview , okular , satty & vlc
+disk mangment :: filelight , duf & ncdu
+firewall :: firewalld
+clac :: kcalc
+charector selction :: kchar select
+fun :: mahjongg , minesweeper , solitare , cmatrix , pipes , tty-clock & cava
+text editors and ide :: (kate | zed) , vscode & neovim  
+office :: libreoffice & onlyoffice
+compilers :: cargo ,python ,nodejs ,bun , gcc , minio , make & cmake
+terminal multiplexer :: zellij
+clipboard mangment :: wl-copy , wl-paste & cliphist
+package mangers ::
+OPTIONAL :(flatpks ,AM (appimage manger) , crago , snap ) 
+REQUIRED: local-package-manger(dnf ,pacman  | apt) & nix  
+
+data formating ::jq & yq
+git stuff :: git , gh , delta , lazygit , github-desktop & git-leaks
+sql :: postgresql server , pgcli , lazy-sql & DBeaver 
+display manager :: sddm & noctalia-greeter-compositor
+DE mangment :: kde plasma  ,  
+(niri & noctalia) ,
+(awww & hyprpicker) &
+( xdg-desktop-portal , xdg-desktop-portal-gtk & xdg-desktop-portal-gnome)
+
+shell :: zsh , zsh-autosuggestion , zsh-history-substring , oh-my-posh & zsh-syntax-highlighting 
+gnu-refiend :: bat , fd ,  fzf , tealdeer  & ripgrep 
+docker stuff :: docker , compose & lazy-docker
+ISO management :: fedora media writer & ark
+store manger :: discover
+graphics management :: kpaint , figma-linux & drawio
+encription :: sops & age
+useful CLIs :: rmlint , pass , btop , fastfetch , just , rofi , stow , tealdeer & cloudflared
+useful GUIs :: obsidian , localsend &, telegram
+
+
+
+NEEDS CHECKING :
+ffmpeg
+playerctl
+7z
+ssh stuff :: ssh , sshd , scp , ssh-keygen & sftp

@@ -1,0 +1,18 @@
+switch-events {
+    lid-close { spawn "noctalia" "msg" "session" "lock-and-suspend"; }
+    lid-open { spawn "notify-send" "-a" "frodorax" "Welcome back g1d3onFr0st!"; }
+}
+
+hotkey-overlay {
+    skip-at-startup
+}
+
+prefer-no-csd
+
+screenshot-path "~/Pictures/Screenshots/screenshot_%Y%m%d_%H%M%S.png"
+// screenshot-path null
+
+animations {
+    // off
+    slowdown 1.5
+}

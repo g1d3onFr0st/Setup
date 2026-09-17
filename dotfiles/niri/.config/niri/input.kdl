@@ -1,0 +1,43 @@
+input {
+    keyboard {
+        xkb {
+           layout "us"
+           options "caps:swapescape"
+        }
+        numlock
+        track-layout "global" // determine weather if the current layout should be consistent accross all windows 
+        repeat-delay 600
+        repeat-rate 25
+
+    }
+   touchpad {
+        tap // tap instead of click
+        dwt // disable while typing
+        // natural-scroll // inverted scroll
+        disabled-on-external-mouse
+
+        accel-speed 0 // cursor acceleration
+        accel-profile "flat" // flat or adaptive (uses cursor acceleration)
+        scroll-method "edge" // no-scroll or two-finger or edge or on-button-down
+        // scroll-button "" // chooses the scroll button if $( scroll-method "on-button-down" )
+        // scroll-button-lock 
+        scroll-factor 1
+    }
+    mouse {
+        accel-speed 0 // cursor acceleration
+        accel-profile "flat" // flat or adaptive (uses cursor acceleration)
+        scroll-method "edge" // no-scroll or two-finger or edge or on-button-down
+        scroll-factor 1
+    }
+    disable-power-key-handling
+    warp-mouse-to-focus
+    focus-follows-mouse max-scroll-amount="100%"
+    mod-key "Super"
+    mod-key-nested "Alt"
+}
+cursor {
+        hide-when-typing
+    hide-after-inactive-ms 10000
+
+}
+

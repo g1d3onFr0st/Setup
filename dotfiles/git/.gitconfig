@@ -1,0 +1,14 @@
+[init]
+	defaultBranch = main
+[user]
+	email = alisamersabah@gmail.com
+	name = g1d3onFr0st
+[core]
+	pager = delta
+[interactive]
+	diffFilter = delta --color-only
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

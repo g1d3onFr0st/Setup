@@ -1,0 +1,90 @@
+layout {
+    gaps 15
+    default-column-display "normal" // or tabbed
+    always-center-single-column
+    center-focused-column "never" // or always
+    preset-column-widths {
+        proportion 0.3333
+        proportion 0.5
+        proportion 0.6667
+        // Fixed sets the width in logical pixels exactly.
+        // fixed 1920
+    }
+
+    preset-window-heights {
+        proportion 0.3333
+        proportion 0.5 
+        proportion 0.6667
+    }
+
+    // If you leave the brackets empty, the windows themselves will decide their initial width.
+    // default-column-width { proportion 0.5; }
+    default-column-width {}
+    // By default focus ring and border are rendered as a solid background rectangle
+    // behind windows. That is, they will show up through semitransparent windows.
+    // This is because windows using client-side decorations can have an arbitrary shape.
+    //
+    // If you don't like that, you should uncomment `prefer-no-csd` below.
+    // Niri will draw focus ring and border *around* windows that agree to omit their
+    // client-side decorations.
+    //
+    // Alternatively, you can override it with a window rule called
+    // `draw-border-with-background`.
+    // You can change how the focus ring looks.
+    focus-ring {
+        // off
+        width 2
+        active-color "#7fc8ff"
+        // inactive-color "#FF0000"
+        // active-gradient from="#80c8ff" to="#c7ff7f" angle=90
+        // inactive-gradient from="#505050" to="#808080" angle=45 relative-to="workspace-view"
+    }
+    border {
+        off
+        width 4
+        active-color "#ffc87f"
+        // inactive-color "#505050"
+        urgent-color "#9b0000"
+        // active-gradient from="#e5989b" to="#ffb4a2" angle=45 relative-to="workspace-view" in="oklch longer hue"
+        // inactive-gradient from="#505050" to="#808080" angle=45 relative-to="workspace-view"
+    }
+
+    shadow {
+        // Uncomment the next line to enable shadows.
+        on
+
+        draw-behind-window true
+        softness 30
+        spread 5
+        offset x=0 y=5
+        color "#0007"
+    }
+    struts {
+        left 0
+        right 0
+        top 0
+        bottom 0
+    }
+        tab-indicator {
+        off
+        on
+        gap 5
+        width 4
+        length total-proportion=0.5
+        position "left"
+        gaps-between-tabs 2
+        corner-radius 8
+        inactive-color "gray"
+        urgent-color "red"
+        // active-gradient from="#80c8ff" to="#bbddff" angle=45
+        // inactive-gradient from="#505050" to="#808080" angle=45 relative-to="workspace-view"
+        // urgent-gradient from="#800" to="#a33" angle=45
+    }
+// sets the default background color for workspaces.
+// visible when not using any background tools like swaybg.
+    // background-color "#003300"
+    insert-hint {
+        on
+        color "#ffc87f80"
+    }
+}
