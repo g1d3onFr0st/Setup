@@ -1,7 +1,7 @@
 binds {
-    Mod+Alt+Equal { spawn-sh "~/.local/bin/niri-zoomctl in" ; }
-    Mod+Alt+Minus { spawn-sh "~/.local/bin/niri-zoomctl out" ; }
-    Mod+Alt+Return { spawn-sh "~/.local/bin/niri-zoomctl reset" ; }
+    Mod+Alt+Equal { spawn-sh "~/.config/niri/bins/niri-zoomctl in" ; }
+    Mod+Alt+Minus { spawn-sh "~/.config/niri/bins/niri-zoomctl out" ; }
+    Mod+Alt+Return { spawn-sh "~/.config/niri/bins/niri-zoomctl reset" ; }
 
     Mod+P hotkey-overlay-title="Run a Wallpaper Launcher: Noctalia Wallpaper Launcher" { spawn-sh "noctalia msg panel-open wallpaper"; }
     Mod+Ctrl+Shift+Alt+Space hotkey-overlay-title=null repeat=true { spawn-sh "noctalia msg panel-toggle launcher /emo"; }
@@ -9,11 +9,12 @@ binds {
     Alt+Tab {spawn "";}
     Alt+Shift+Tab {spawn "";}
     Mod+Backspace hotkey-overlay-title="Run a Code IDE: Visual Studio Code" { spawn "code"; }
-    Mod+Backslash hotkey-overlay-title="Run a File Explorer: Dolphin" { spawn "dolphin"; }
-    Mod+Shift+F23 hotkey-overlay-title="Run an Application Launcher: Noctalia Launcher" { spawn-sh "noctalia msg panel-toggle launcher "; }
+    Mod+Backslash hotkey-overlay-title="Run a File Explorer: Dolphin" { spawn-sh "[[ \"$DESKTOP\" == \"1\" ]] && dolphin || ghostty -e yazi"; }
+    Mod+Shift+F23 hotkey-overlay-title="Run an Application Launcher: Noctalia Launcher" { spawn-sh " [[ \"$DESKTOP\" == \"1\" ]] &&  noctalia msg panel-toggle launcher || fuzzel"; }
+    Mod+Shift+Return hotkey-overlay-title="Run an Application Launcher: Noctalia Launcher" { spawn-sh " [[ \"$DESKTOP\" == \"1\" ]] &&  noctalia msg panel-toggle launcher || fuzzel"; }
     Mod+Shift+Slash hotkey-overlay-title=null { show-hotkey-overlay; }
     Mod+Return hotkey-overlay-title="Open a Terminal: Ghostty" { spawn "ghostty"; }
-    Mod+Space hotkey-overlay-title="Run a Browser: Firefox Developer-Edition Browser " { spawn-sh "firefox-devedition"; }
+    Mod+Space hotkey-overlay-title="Run a Browser: Firefox Developer-Edition Browser " { spawn-sh "[[ \"$DESKTOP\" == \"1\" ]] && firefox-devedition || firefox"; }
     Mod+Y hotkey-overlay-title="Toggle Color Picker: Hyprpicker" { spawn-sh "hyprpicker | wl-copy"; }
 
     Mod+Shift+U hotkey-overlay-title="Lock and suspend the Screen: Noctalia Lock And Suspend" { spawn-sh "noctalia msg session lock-and-suspend"; }
@@ -36,8 +37,8 @@ binds {
 
     XF86AudioPlay        allow-when-locked=true { spawn-sh "noctalia msg media toggle"; }
 
-    XF86MonBrightnessUp allow-when-locked=true { spawn-sh "noctalia msg brightness-up 10"; }
-    XF86MonBrightnessDown allow-when-locked=true { spawn-sh "noctalia msg brightness-down 10"; }
+    XF86MonBrightnessUp allow-when-locked=true { spawn-sh "[[ \"$DESKTOP\" == \"1\" ]] && noctalia msg brightness-up 10 || brightnessctl set +10%"; }
+    XF86MonBrightnessDown allow-when-locked=true { spawn-sh "[[ \"$DESKTOP\" == \"1\" ]] && noctalia msg brightness-down 10 || brightnessctl set 10%-"; }
 
 
     Mod+O hotkey-overlay-title=null repeat=true repeat=false { toggle-overview; }

@@ -137,4 +137,7 @@
     "*": true,
   },
   "terminal.integrated.fontFamily": "'0xProto Nerd Font Mono'",
+  "[lua]": {
+    "editor.defaultFormatter": "sumneko.lua",
+  },
 }

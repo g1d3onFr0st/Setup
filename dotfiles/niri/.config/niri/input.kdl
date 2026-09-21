@@ -14,7 +14,7 @@ input {
         tap // tap instead of click
         dwt // disable while typing
         // natural-scroll // inverted scroll
-        disabled-on-external-mouse
+        // disabled-on-external-mouse
 
         accel-speed 0 // cursor acceleration
         accel-profile "flat" // flat or adaptive (uses cursor acceleration)

@@ -12,12 +12,11 @@ path=(
 export PATH
  path=(${path:#/nix/var/nix/profiles/default/bin})
 export EDITOR=nvim
-export VISUAL=code
+if [[ "$DESKTOP" == "1" ]]; then export VISUAL=code; else export VISUAL=nvim; fi
+if [[ "$DESKTOP" == "1" ]]; then export BROWSER=firefox-devedition; else export BROWSER=firefox; fi
 export GITHUB_TOKEN="$(gh auth token)"
 
-export PAGER=bat
-export TERMINAL=ghostty
-export BROWSER=firefox-devedition
+export PAGER=less
 export NIXPKGS_ALLOW_UNFREE=1
 export NIXPKGS_ALLOW_INSECURE=1
 export PASSWORD_STORE_DIR="$HOME/.password-store/"

@@ -33,6 +33,44 @@ fedora)
     nix profile install nixpkgs\#stow
     ~/.nix-profile/bin/stow -t ~ -d ~/Setup/dotfiles --adopt $(ls ~/Setup/dotfiles)
    sudo "$HOME/.nix-profile/bin/stow" -t / -d ~/Setup/system-dotfiles --no-folding --adopt $(ls ~/Setup/system-dotfiles)
+   
+   touch ~/Setup/setup-status.txt
+   
+
+   touch ~/Setup/dotfiles/environment.d/.config/environment.d/desktop.conf
+
+   if [[ "$1" == "--usb" ]]; then
+       echo "export DESKTOP=0" >> ~/Setup/dotfiles/environment.d/.config/environment.d/desktop.conf
+   else
+       echo "export DESKTOP=1" >> ~/Setup/dotfiles/environment.d/.config/environment.d/desktop.conf
+   fi
+   
+   echo "OS-env-setup.zsh : DONE" >> ~/Setup/setup-status.txt
+
+   sudo dnf install -y zsh
+   nix profile add nixpkgs\#{zsh-autosuggestions,zsh-syntax-highlighting,zsh-history-substring-search,fzf,oh-my-posh,zoxide,eza}
+   sudo chsh -s "$(command -v zsh)" "$USER"
+   echo "shell.sh : DONE" >> ~/Setup/setup-status.txt
+
+   echo "running cleanup"
+   sudo dnf update -y && sudo dnf upgrade -y
+   sudo dnf autoremove -y      
+   sudo echo ""
+   echo "setup is done , rebooting in "
+   echo "3"
+   sleep 1
+   echo "2"
+   sleep 1
+   echo "1"
+   sleep 1
+   echo "final.sh : DONE" >> ~/Setup/setup-status.txt
+   sudo systemctl reboot
+
+
+
+
+
+
 
     ;;
 

@@ -1,8 +1,10 @@
-spawn-at-startup "awww-daemon"
-spawn-at-startup "noctalia"
-spawn-at-startup "~/.local/bin/niri-zoomd"
-
-spawn-at-startup "zsh" "-lc" "~/.config/niri/scripts/noctalia-bar-toggle.sh"
-// spawn-at-startup "sh" "-c" "~/.config/niri/scripts/init.sh"
-// // spawn-at-startup "zsh" "-lc" "~/.config/niri/scripts/init.sh > /tmp/niri-init.log 2>&1"
-// // spawn-at-startup "~/.config/niri/scripts/init.sh"
+// spawn-at-startup "zsh" "-c" "[[ \"$DESKTOP\" == \"1\" ]] && awww-daemon"
+//
+// spawn-at-startup "zsh" "-c" "[[ \"$DESKTOP\" == \"1\" ]] && noctalia"
+// spawn-at-startup "sh" "-c" "[ \"$DESKTOP\" = \"1\" ] && awww-daemon"
+//
+// spawn-at-startup "sh" "-c" "[ \"$DESKTOP\" = \"1\" ] && noctalia"
+//
+spawn-at-startup "~/.config/niri/bins/niri-zoomd"
+spawn-at-startup "~/.config/niri/scripts/noctalia.sh"
+spawn-at-startup "~/.config/niri/scripts/awww-daemon.sh"

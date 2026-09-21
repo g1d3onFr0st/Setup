@@ -1,17 +1,29 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
-code &
-sleep 0.4
+# Always start niri-zoomd
+"$HOME/.config/niri/bins/niri-zoomd" &
 
-firefox-devedition &
-sleep 0.4
+# Only start desktop-specific applications when DESKTOP=1
+if [[ "$DESKTOP" == "1" ]]; then
+    awww-daemon &
+    noctalia &
 
-ghostty &
-sleep 1
+    "$HOME/.config/niri/scripts/noctalia-bar-toggle.sh" &
+fi
 
-niri msg action move-column-left
-niri msg action move-column-left
+# code &
+# sleep 0.4
+#
+# firefox-devedition &
+# sleep 0.4
+#
+# ghostty &
+# sleep 1
+#
+# niri msg action move-column-left
+# niri msg action move-column-left
 # niri msg action focus-workspace Media
+
 #
 # ghostty --font-size=8 -e env -u ZELLIJ -u ZELLIJ_SESSION_NAME zellij --layout ~/.config/zellij/layouts/btop-shell.kdl &
 # sleep 0.4
