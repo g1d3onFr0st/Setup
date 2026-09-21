@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
 set -Eeuo pipefail
 trap 'echo "Failed on line $LINENO"' ERR
@@ -31,7 +31,8 @@ fedora)
     git clone https://github.com/g1d3onFr0st/Setup.git
 
     nix profile install nixpkgs\#stow
-    ~/.nix-profile/bin/stow -t ~ -d ~/setup/dotfiles --adopt git 
+    ~/.nix-profile/bin/stow -t ~ -d ~/Setup/dotfiles --adopt $(ls ~/Setup/dotfiles)
+   sudo "$HOME/.nix-profile/bin/stow" -t / -d ~/Setup/system-dotfiles --no-folding --adopt $(ls ~/Setup/system-dotfiles)
 
     ;;
 

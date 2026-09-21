@@ -4,13 +4,13 @@
 sudo mkdir -p /boot/grub2/themes
 
 sudo dnf install -y git
-git clone https://github.com/harishnkr/bsol ~/TEST/
-git clone https://github.com/catppuccin/grub ~/TEST/
-tar -xzf stylish.tar.gz -C ~/TEST/
+git clone https://github.com/harishnkr/bsol ~/GRUBSETUPTEMPFOLDER/
+git clone https://github.com/catppuccin/grub ~/GRUBSETUPTEMPFOLDER/
+tar -xzf ~/Setup/config/grub/stylish.tar.gz -C ~/GRUBSETUPTEMPFOLDER/
 
-sudo cp -r ~/TEST/bsol/bsol ~/TEST/grub/src/* ~/TEST/stylish /boot/grub2/themes/
-rm -rf ~/TEST
+sudo cp -r ~/GRUBSETUPTEMPFOLDER/bsol/bsol ~/GRUBSETUPTEMPFOLDER/grub/src/* ~/GRUBSETUPTEMPFOLDER/stylish /boot/grub2/themes/
+rm -rf ~/GRUBSETUPTEMPFOLDER
 
-sudo rm -rf /etc/default/grub
-sudo cp ~/Setup/config/grub/grub /etc/default/
 sudo grub2-mkconfig -o /boot/grub2/grub.cfg
+
+echo "grub.sh : DONE" >> ~/Setup/setup-status.txt

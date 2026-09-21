@@ -12,4 +12,5 @@
     sleep 1
     echo "1"
     sleep 1
+echo "final.sh : DONE" >> ~/Setup/setup-status.txt
     sudo systemctl reboot

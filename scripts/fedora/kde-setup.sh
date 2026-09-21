@@ -9,5 +9,7 @@ KDE_BLOAT=(
 
 sudo dnf remove -y "${KDE_BLOAT[@]}"
 
-nix run nixpkgs\#konsave -- -i ~/setup/config/kde-plasma/kde.knsv
+nix run nixpkgs\#konsave -- -i ~/Setup/config/kde-plasma/kde.knsv
 nix run nixpkgs\#konsave -- -a kde
+
+echo "kde-setup.sh : DONE" >> ~/Setup/setup-status.txt
