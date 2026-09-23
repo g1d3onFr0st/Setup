@@ -5,6 +5,7 @@ LOCAL_REPOS=(
 )
 
 LOCAL_PKGS=(
+    "caddy"
     "ghostty"
     "localsend"
     "nodejs"
