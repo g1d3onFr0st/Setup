@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+clear
+ghostty --font-size=45 -e ~/.local/scripts/tetris.ts 
+clear
+

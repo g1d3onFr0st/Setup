@@ -134,10 +134,11 @@
   "firefox.executable": "/home/g1d3onFr0st/.nix-profile/bin/firefox-devedition",
   "workbench.iconTheme": "catppuccin-latte",
   "supermaven.enable": {
-    "*": true,
+    "*": false,
   },
   "terminal.integrated.fontFamily": "'0xProto Nerd Font Mono'",
   "[lua]": {
     "editor.defaultFormatter": "sumneko.lua",
   },
+  "js/ts.experimental.useTsgo": true,
 }
