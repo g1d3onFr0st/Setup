@@ -62,7 +62,9 @@ nix profile install nixpkgs\#bun
 # install zed
 curl -f https://zed.dev/install.sh | sh
 
+# install opencode
 
+curl -fsSL https://opencode.ai/v2/install | bash
 
 
 echo "other-pkgs.sh : DONE" >> ~/Setup/setup-status.txt
