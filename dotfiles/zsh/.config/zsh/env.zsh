@@ -7,6 +7,7 @@ path=(
      "/usr/bin/"
      "/bin"
      "$HOME/.bun/bin/"
+     "$HOME/.cargo/bin/"
      $path
 )
 export PATH

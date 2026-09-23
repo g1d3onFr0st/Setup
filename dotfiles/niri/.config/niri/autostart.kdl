@@ -5,6 +5,7 @@
 //
 // spawn-at-startup "sh" "-c" "[ \"$DESKTOP\" = \"1\" ] && noctalia"
 //
-spawn-at-startup "~/.config/niri/bins/niri-zoomd"
-spawn-at-startup "~/.config/niri/scripts/noctalia.sh"
 spawn-at-startup "~/.config/niri/scripts/awww-daemon.sh"
+spawn-at-startup "~/.config/niri/scripts/noctalia.sh"
+spawn-at-startup "~/.config/niri/scripts/niri-empty.sh"
+spawn-at-startup "~/.config/niri/bins/niri-zoomd"

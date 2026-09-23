@@ -1,3 +1,0 @@
-copy(){
-cat $1 | wl-copy
-}
