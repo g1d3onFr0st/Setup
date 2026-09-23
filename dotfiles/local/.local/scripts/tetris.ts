@@ -11,9 +11,12 @@ const config = {
 
 const { bad, down, good, left, right, up } = config;
 
+let canPlay = true;
+
 process.stdin.setRawMode(true);
 process.stdin.resume();
 process.stdin.on("data", (key) => {
+  if (!canPlay) return;
   const char = key.toString();
 
   if (char === left) {
@@ -35,7 +38,7 @@ process.stdin.on("data", (key) => {
   //   if (char === ' ') console.log('space')
 
   if (char === "\u0003") {
-    process.exit();
+    quit();
   }
 });
 
@@ -78,7 +81,7 @@ const genJumper = (length: number) => {
   return initJumper;
 };
 
-const jumper = genJumper(10);
+const jumper = genJumper(11);
 
 function getXCords() {
   let xCol = 0;
@@ -98,6 +101,8 @@ function getXCords() {
 }
 
 function moveX(dir: "left" | "right" | "down" | "up") {
+  if (!canPlay) return;
+
   const { xCol, xRow } = getXCords();
 
   if (dir === "down" && xCol !== jumper.length - 2) {
@@ -118,21 +123,59 @@ function moveX(dir: "left" | "right" | "down" | "up") {
 let interval: ReturnType<typeof setInterval>;
 
 function lose() {
+  if (!canPlay) return;
+  canPlay = false;
   clearInterval(interval);
-  console.error("U LOOSSEEE");
+  logGame("\x1b[31mU LOOSSEEE\x1b[0m");
   setTimeout(() => process.exit(), 1500);
 }
 
-function logGame() {
-  console.clear();
-  jumper.forEach((c) => console.log(c.join(" ")));
+function quit() {
+  if (!canPlay) return;
+  canPlay = false;
+  clearInterval(interval);
+  logGame("\x1b[33mFINEEEEE , come again LOOSSEEER\x1b[0m");
+  setTimeout(() => process.exit(), 1500);
+}
+
+// function logGame(message?: string) {
+//   if (!canPlay && message === undefined) return;
+//   console.clear();
+//   jumper.forEach((c, i) =>
+//     console.log(c.join(" "), i === Math.floor(jumper.length / 2) ? i : ""),
+//   );
+//   if (message !== undefined) {
+//     console.error(message);
+//   }
+// }
+
+function logGame(message?: string) {
+  if (!canPlay && message === undefined) return;
+
+  // Move cursor to top-left
+  process.stdout.write("\x1b[H");
+
+  // Draw game
+  jumper.forEach((c, i) => {
+    process.stdout.write(
+      `${c.join(" ")}${i === Math.floor(jumper.length / 2) ? ` ${i}` : ""}\x1b[K\n`,
+    );
+  });
+
+  // Draw message on the line after the game
+  if (message !== undefined) {
+    process.stdout.write(`${message}\x1b[K`);
+  }
+
+  // Clear anything below the game/message
+  process.stdout.write("\x1b[J");
 }
 
 logGame();
 
-moveX("down");
-
 interval = setInterval(() => {
-  logGame();
+  if (!canPlay) return;
+
   moveX("down");
+  logGame();
 }, 500);

@@ -28,6 +28,10 @@ fedora)
     sudo systemctl enable --now nix-daemon
     
     gh auth login
+    eval "$(ssh-agent -s)"
+    ssh-add ~/.ssh/id_ed25519
+    ssh -T git@github.com
+    ssh -T git@github.com
     git clone https://github.com/g1d3onFr0st/Setup.git
 
    

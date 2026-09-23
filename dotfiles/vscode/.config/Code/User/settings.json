@@ -15,7 +15,7 @@
   "editor.cursorBlinking": "smooth",
   "files.exclude": {
     "**/.git": false,
-    "**/node_modules": false,
+    "**/node_modules": false
   },
   // "remote.portsAttributes": {
   //   "5500": {
@@ -69,7 +69,7 @@
     "https://raw.githubusercontent.com/microsoft/vscode/": true,
     "https://schemastore.azurewebsites.net/": true,
     "https://ui.shadcn.com": true,
-    "https://www.schemastore.org/": true,
+    "https://www.schemastore.org/": true
   },
   "workbench.panel.showLabels": false,
   "keyboard.dispatch": "keyCode",
@@ -77,7 +77,7 @@
   "bookmarks.useWorkaroundForFormatters": true,
   "cSpell.autoFormatConfigFile": true,
   "[html]": {
-    "editor.defaultFormatter": "vscode.html-language-features",
+    "editor.defaultFormatter": "vscode.html-language-features"
   },
   "code-runner.saveAllFilesBeforeRun": true,
   "code-runner.saveFileBeforeRun": true,
@@ -86,13 +86,13 @@
   "terminal.integrated.suggest.enabled": true,
   "workbench.editorAssociations": {
     "{git,gitlens,chat-editing-snapshot-text-model,copilot,git-graph,git-graph-3}:/**/*.qrc": "default",
-    "*.svg": "default",
+    "*.svg": "default"
   },
   // "diffEditor.hideUnchangedRegions.enabled": true,
   // "editor.inlayHints.enabled": "off",
   "workbench.colorCustomizations": {
     "editor.lineHighlightBackground": "#1073cf2d",
-    "editor.lineHighlightBorder": "#00eeff4b",
+    "editor.lineHighlightBorder": "#00eeff4b"
   },
   "css.format.spaceAroundSelectorSeparator": true,
   "less.format.spaceAroundSelectorSeparator": true,
@@ -107,23 +107,23 @@
   "gitlens.ai.vscode.model": "copilot:gpt-4.1",
   "gitlens.graph.minimap.enabled": false,
   "[snippets]": {
-    "editor.defaultFormatter": "vscode.json-language-features",
+    "editor.defaultFormatter": "vscode.json-language-features"
   },
   "gitlens.ai.gitkraken.model": "gemini:gemini-2.0-flash",
   "editor.quickSuggestions": {
-    "strings": "on",
+    "strings": "on"
   },
   "tailwind-fold.autoFold": false,
   "qt-qml.qmlls.useQmlImportPathEnvVar": true,
   "files.associations": {
     "*.qml": "qml",
-    "Caddyfile": "plaintext",
+    "Caddyfile": "plaintext"
   },
   "terminal.integrated.commandsToSkipShell": [
     "kilo-code.new.agentManagerOpen",
     "kilo-code.new.agentManager.showTerminal",
     "kilo-code.new.agentManager.previousTerminal",
-    "kilo-code.new.agentManager.nextTerminal",
+    "kilo-code.new.agentManager.nextTerminal"
   ],
   "kilo-code.new.agentWorkStyle": "unset",
   "tailwindCSS.classAttributes": ["class", "className"],
@@ -134,11 +134,8 @@
   "firefox.executable": "/home/g1d3onFr0st/.nix-profile/bin/firefox-devedition",
   "workbench.iconTheme": "catppuccin-latte",
   "supermaven.enable": {
-    "*": false,
+    "*": false
   },
   "terminal.integrated.fontFamily": "'0xProto Nerd Font Mono'",
-  "[lua]": {
-    "editor.defaultFormatter": "sumneko.lua",
-  },
-  "js/ts.experimental.useTsgo": true,
+  "js/ts.experimental.useTsgo": true
 }
