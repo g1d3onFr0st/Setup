@@ -8,6 +8,8 @@ path=(
      "/bin"
      "$HOME/.bun/bin/"
      "$HOME/.cargo/bin/"
+     "$HOME/.opencode/bin/"
+
      $path
 )
 export PATH
