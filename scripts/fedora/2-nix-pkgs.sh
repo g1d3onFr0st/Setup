@@ -7,7 +7,6 @@
         "delta"
         "fastfetch"
         "fd"
-        "firefox-devedition"
         "gcc"
         "lazydocker"
         "lazygit"

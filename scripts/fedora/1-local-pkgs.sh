@@ -14,8 +14,8 @@ LOCAL_PKGS=(
 
 
 
-# sudo dnf config-manager addrepo --id=mozilla --set=baseurl=https://packages.mozilla.org/rpm/firefox --set=gpgkey=https://packages.mozilla.org/rpm/firefox/signing-key.gpg --set=gpgcheck=1 --set=repo_gpgcheck=0 --set=priority=10 --set=includepkgs=firefox-devedition\*
-# sudo dnf makecache --refresh --repo mozilla
+sudo dnf config-manager addrepo --id=mozilla --set=baseurl=https://packages.mozilla.org/rpm/firefox --set=gpgkey=https://packages.mozilla.org/rpm/firefox/signing-key.gpg --set=gpgcheck=1 --set=repo_gpgcheck=0 --set=priority=10 --set=includepkgs=firefox-devedition\*
+sudo dnf makecache --refresh --repo mozilla
 
 
 sudo dnf makecache --refresh 
