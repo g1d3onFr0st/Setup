@@ -12,6 +12,7 @@ const config = {
 const { bad, down, good, left, right, up } = config;
 
 let canPlay = true;
+let time = 0;
 
 process.stdin.setRawMode(true);
 process.stdin.resume();
@@ -158,7 +159,7 @@ function logGame(message?: string) {
   // Draw game
   jumper.forEach((c, i) => {
     process.stdout.write(
-      `${c.join(" ")}${i === Math.floor(jumper.length / 2) ? ` ${i}` : ""}\x1b[K\n`,
+      `${c.join(" ")}${i === Math.floor(jumper.length / 2) ? ` ${time}` : ""}\x1b[K\n`,
     );
   });
 
@@ -179,3 +180,7 @@ interval = setInterval(() => {
   moveX("down");
   logGame();
 }, 500);
+
+setInterval(() => {
+  time++;
+}, 1000);

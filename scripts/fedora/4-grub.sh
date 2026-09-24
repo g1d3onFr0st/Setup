@@ -3,7 +3,6 @@
 
 sudo mkdir -p /boot/grub2/themes
 
-sudo dnf install -y git
 git clone https://github.com/harishnkr/bsol ~/GRUBSETUPTEMPFOLDER/
 git clone https://github.com/catppuccin/grub ~/GRUBSETUPTEMPFOLDER/
 tar -xzf ~/Setup/config/grub/stylish.tar.gz -C ~/GRUBSETUPTEMPFOLDER/

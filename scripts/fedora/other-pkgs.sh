@@ -3,7 +3,6 @@
 # nix packages
 NIX_PKGS=(
     "age"
-    "cava"
     "chromium"
     "cloudflared"
     "cmtrix"
@@ -12,10 +11,7 @@ NIX_PKGS=(
     "duf"
     "github-desktop"
     "gitleaks"
-    "just"
-    "lazygit"
     "minio"
-    "ncdu"
     "obsidian"
     "rmlint"
     "sops"
@@ -58,13 +54,10 @@ sudo dnf install -y "${LOCAL_PKGS[@]}"
 nix profile install nixpkgs\#bun
 
 ~/.nix-profile/bin/bun i -g @google/gemini-cli
+~/.nix-profile/bin/bun bun --trust @opencode/cli
 
 # install zed
 curl -f https://zed.dev/install.sh | sh
-
-# install opencode
-
-curl -fsSL https://opencode.ai/v2/install | bash
 
 
 echo "other-pkgs.sh : DONE" >> ~/Setup/setup-status.txt

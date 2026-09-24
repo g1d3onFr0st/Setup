@@ -1,16 +1,14 @@
-~/.config/sops  
-~/.password-store
-~/.gnupg  keys
-~/.ssh
-pictures
-videos
-desktop
-documents
-music
-downloads
-public
-templates
-codes
-personal-stuff
-bookmark
-vscode stuff 
+~/.config/sops                      DONE in personal-dotfiles
+~/.gnupg  keys                  DONE in personal-dotfiles
+~/.ssh                  DONE in personal-dotfiles
+pictures                    DONE in personal-dotfiles
+videos                  DONE in personal-dotfiles
+desktop                     DONE in personal-dotfiles
+documents                   DONE in personal-dotfiles
+music                   DONE in personal-dotfiles
+downloads                   DONE in personal-dotfiles
+public                  DONE in personal-dotfiles
+templates                   DONE in personal-dotfiles
+codes                   DONE in personal-dotfiles
+personal-stuff                  DONE in personal-dotfiles
+browser bookmark ( synced through account but best to copy )

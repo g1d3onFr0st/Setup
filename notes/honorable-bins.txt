@@ -1,7 +1,7 @@
 konsave
 distrobox or a VM
 podman 
-gum
+gum bubbletea
 redis , CLI
 sqlite , cli , browser 
 Git LFS

@@ -19,3 +19,7 @@ setup-status.txt
 dotfiles/environment.d/.config/environment.d/desktop.conf
 
 dotfiles/pgcli/.config/pgcli/log
+
+moving-status.txt
+
+personal-dotfiles
