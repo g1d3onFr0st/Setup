@@ -2,8 +2,8 @@
 
 sudo dnf config-manager addrepo --from-repofile https://download.docker.com/linux/fedora/docker-ce.repo
 
-sudo dnf install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
-nix run nixpkgs\#kubectl
+sudo dnf install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin kubernetes
+# nix profile add nixpkgs\#kubectl
 sudo systemctl enable --now docker
 
 sudo usermod -aG docker $USER

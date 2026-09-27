@@ -1,28 +1,15 @@
-konsave
-distrobox or a VM
-podman 
-gum bubbletea
-redis , CLI
-sqlite , cli , browser 
-Git LFS
-tailscale headscale
-cargo
-direnv
-yq
 rofi
 pass
-postman , insomnia
-lazysql , lazydocker
-figma-linux
 
-
-
-KeePassXC
-watchexec
-ttyd
-asciinema
+konsave
 choose
 sd
+
+
+distrobox or a VM
+KeePassXC
+ttyd
+asciinema
 
 
 
@@ -40,12 +27,9 @@ pandoc
 poppler-utils
 ImageMagick
 qpdf
-jpdf
 
 
 
 cava
 pipes
-
-
 

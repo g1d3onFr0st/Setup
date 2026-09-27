@@ -11,4 +11,4 @@ public                  DONE in personal-dotfiles
 templates                   DONE in personal-dotfiles
 codes                   DONE in personal-dotfiles
 personal-stuff                  DONE in personal-dotfiles
-browser bookmark ( synced through account but best to copy )
+browser bookmark ( synced through firefox account but best to copy )
