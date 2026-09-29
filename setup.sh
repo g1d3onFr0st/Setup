@@ -26,6 +26,9 @@ fedora)
     
     sudo dnf install -y git gh nix nix-daemon
     sudo systemctl enable --now nix-daemon
+
+    nix profile install nixpkgs\#stow
+    ~/.nix-profile/bin/stow -t ~ -d ~/Personal-Dotfiles --adopt $(ls ~/Personal-Dotfiles)
     
     gh auth login
     eval "$(ssh-agent -s)"
@@ -33,7 +36,9 @@ fedora)
     ssh -T git@github.com
     git clone https://github.com/g1d3onFr0st/Setup.git
 
-   
+    ~/.nix-profile/bin/stow -t ~ -d ~/Setup/dotfiles --adopt $(ls ~/Setup/dotfiles)
+    sudo "$HOME/.nix-profile/bin/stow" -t / -d ~/Setup/system-dotfiles --no-folding --adopt $(ls ~/Setup/system-dotfiles)
+
    touch ~/Setup/setup-status.txt
    
    touch ~/Setup/dotfiles/environment.d/.config/environment.d/desktop.conf
@@ -42,10 +47,6 @@ fedora)
    else
        echo "export DESKTOP=1" >> ~/Setup/dotfiles/environment.d/.config/environment.d/desktop.conf
    fi
-   
-   nix profile install nixpkgs\#stow
-   ~/.nix-profile/bin/stow -t ~ -d ~/Setup/dotfiles --adopt $(ls ~/Setup/dotfiles)
-   sudo "$HOME/.nix-profile/bin/stow" -t / -d ~/Setup/system-dotfiles --no-folding --adopt $(ls ~/Setup/system-dotfiles)
 
    sudo dnf install -y zsh
    nix profile add nixpkgs\#{zsh-autosuggestions,zsh-syntax-highlighting,zsh-history-substring-search,fzf,oh-my-posh,zoxide,eza}

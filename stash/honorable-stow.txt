@@ -1,6 +1,0 @@
-konsole
-kate 
-kwrite
-quickshell
-waybar
-hyprland
