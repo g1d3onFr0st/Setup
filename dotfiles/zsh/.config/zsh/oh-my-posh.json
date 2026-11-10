@@ -93,19 +93,6 @@
           "type": "status"
         },
         {
-          "type": "battery",
-          "style": "powerline",
-          "powerline_symbol": "",
-          "foreground": "#193549",
-          "background": "#f6f6f6",
-          "template": " {{ if not .Error }}{{ .Icon }}{{ .Percentage }}{{ end }} ",
-          "options": {
-            "discharging_icon": "",
-            "charging_icon": "󱐋",
-            "charged_icon": ""
-          }
-        },
-        {
           "background": "#d3d7cf",
           "foreground": "#000000",
           "invert_powerline": true,

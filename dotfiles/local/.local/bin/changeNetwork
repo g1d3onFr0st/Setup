@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# ssid="$(nmcli -t --escape no -f SSID device wifi list | awk '!seen[$0]++' | fzf)"
+ssid="$(nmcli -t --escape no -f SSID device wifi list | awk '/[^[:space:]]/ && !seen[$0]++' | fzf)"
+[[ -z "$ssid" ]] && exit 0
+
+bssid="$(nmcli device wifi list | fzf | awk '{print $1}')"
+
+if [[ -n "$bssid" ]]; then
+    nmcli connection modify "$ssid" 802-11-wireless.bssid "$bssid"
+    nmcli connection down "$ssid"
+    nmcli connection up "$ssid"
+else
+    nmcli connection modify "$ssid" 802-11-wireless.bssid ""
+    nmcli connection down "$ssid"
+    nmcli connection up "$ssid"
+fi

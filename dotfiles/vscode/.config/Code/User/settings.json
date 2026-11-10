@@ -140,5 +140,6 @@
   "terminal.integrated.fontFamily": "'0xProto Nerd Font Mono'",
   "js/ts.experimental.useTsgo": true,
   "prettier.trailingComma": "none",
-  "supermaven.allowGitignore": true
+  "supermaven.allowGitignore": true,
+  "svelte.enable-ts-plugin": true
 }

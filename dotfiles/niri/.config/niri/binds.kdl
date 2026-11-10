@@ -14,7 +14,7 @@ binds {
     Mod+Shift+Return hotkey-overlay-title="Run an Application Launcher: Noctalia Launcher" { spawn-sh " [[ \"$DESKTOP\" == \"1\" ]] &&  noctalia msg panel-toggle launcher || fuzzel"; }
     Mod+Shift+Slash hotkey-overlay-title=null { show-hotkey-overlay; }
     Mod+Return hotkey-overlay-title="Open a Terminal: Ghostty" { spawn "ghostty"; }
-    Mod+Space hotkey-overlay-title="Run a Browser: Firefox Developer-Edition Browser " { spawn-sh "[[ \"$DESKTOP\" == \"1\" ]] && firefox-devedition || firefox"; }
+     Mod+Space hotkey-overlay-title="Run a Browser: Firefox Developer-Edition Browser " { spawn-sh "[[ \"$DESKTOP\" == \"1\" ]] && firefox-devedition || firefox"; }
     Mod+Y hotkey-overlay-title="Toggle Color Picker: Hyprpicker" { spawn-sh "hyprpicker | wl-copy"; }
 
     Mod+Shift+U hotkey-overlay-title="Lock and suspend the Screen: Noctalia Lock And Suspend" { spawn-sh "noctalia msg session lock-and-suspend"; }

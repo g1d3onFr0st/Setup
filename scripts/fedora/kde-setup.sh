@@ -5,6 +5,7 @@ KDE_BLOAT=(
     "/usr/bin/kdeconnect-sms" "/usr/bin/headerthemeeditor" "kmail" "/usr/bin/krdc" "krfb" "ktnef" "neochat" "dragon" "/usr/bin/elisa"
     "qrca" "korganizer" "kleopatra" "/usr/bin/akonadiimportwizard" "ktnef" "kaddressbook" "gnome-abrt" "plasma-welcome" "plasma-systemmonitor"
     "/usr/bin/drkonqi-coredump-gui" "/usr/bin/kjournaldbrowser" "xwaylandvideobridge" "kdebugsettings" "kfind" "kwalletmanager5" "kwrite" "kmouth"
+    "akonadi\*" "kmines" "kpat" "kamoso" "mariadb" "mariadb-backup" "mariadb-common"
 )
 
 sudo dnf remove -y "${KDE_BLOAT[@]}"
@@ -12,4 +13,5 @@ sudo dnf remove -y "${KDE_BLOAT[@]}"
 nix run nixpkgs\#konsave -- -i ~/Setup/config/kde-plasma/kde.knsv
 nix run nixpkgs\#konsave -- -a kde
 
-echo "kde-setup.sh : DONE" >> ~/Setup/setup-status.txt
+echo "kde-setup.sh : DONE" >>~/Setup/setup-status.txt
+
